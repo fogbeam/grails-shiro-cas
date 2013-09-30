@@ -1,0 +1,77 @@
+<plugin name='shiro' version='1.3.0' grailsVersion='2.2.3 &gt; *'>
+  <author>Peter Ledbrook</author>
+  <title>Apache Shiro Integration for Grails</title>
+  <description>Enables Grails applications to take advantage of the Apache Shiro security layer, adding easy authentication and access control via roles and permissions.
+</description>
+  <documentation>http://grails.org/plugin/shiro</documentation>
+  <type>ShiroGrailsPlugin</type>
+  <resources>
+    <resource>org.apache.shiro.grails.ShiroFilters</resource>
+    <resource>org.apache.shiro.grails.ShiroAnnotationHandlerService</resource>
+    <resource>org.apache.shiro.grails.ShiroSecurityService</resource>
+    <resource>org.apache.shiro.grails.ShiroTagLib</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='http://snapshots.repository.codehaus.org' url='http://snapshots.repository.codehaus.org/' />
+    <repository name='http://repository.codehaus.org' url='http://repository.codehaus.org/' />
+    <repository name='http://download.java.net/maven/2/' url='http://download.java.net/maven/2/' />
+    <repository name='http://repository.jboss.com/maven2/' url='http://repository.jboss.com/maven2/' />
+    <repository name='http://www.terracotta.org/download/reflector/releases' url='http://www.terracotta.org/download/reflector/releases/' />
+  </repositories>
+  <dependencies>
+    <compile>
+      <dependency group='org.apache.shiro' name='shiro-core' version='1.2.0' />
+      <dependency group='mysql' name='mysql-connector-java' version='5.1.20' />
+      <dependency group='' name='httpmime' version='4.1.3' />
+      <dependency group='org.apache.poi' name='poi' version='3.9' />
+      <dependency group='org.apache.httpcomponents' name='httpcore' version='4.2.1' />
+      <dependency group='' name='c3p0' version='0.9.1.2' />
+      <dependency group='org.apache.shiro' name='shiro-ehcache' version='1.2.0' />
+      <dependency group='org.mvel' name='mvel2' version='2.1.3.Final' />
+      <dependency group='' name='commons-io' version='2.1' />
+      <dependency group='redis.clients' name='jedis' version='2.1.0' />
+      <dependency group='org.apache.shiro' name='shiro-web' version='1.2.0' />
+      <dependency group='org.apache.httpcomponents' name='httpclient' version='4.2.1' />
+      <dependency group='org.apache.shiro' name='shiro-cas' version='1.2.0' />
+      <dependency group='org.apache.shiro' name='shiro-quartz' version='1.2.0' />
+      <dependency group='' name='jcl-over-slf4j' version='1.6.1' />
+      <dependency group='com.google.guava' name='guava' version='11.0.1' />
+      <dependency group='' name='geronimo-stax-api_1.0_spec' version='1.0.1' />
+      <dependency group='joda-time' name='joda-time' version='2.0' />
+      <dependency group='' name='wstx-asl' version='3.2.7' />
+      <dependency group='org.apache.lucene' name='lucene-analyzers' version='3.6.0' />
+      <dependency group='org.codehaus.jackson' name='jackson-mapper-asl' version='1.9.2' />
+      <dependency group='jaxen' name='jaxen' version='1.1.1' />
+      <dependency group='' name='apache-solr-solrj' version='3.6.2' />
+      <dependency group='org.apache.lucene' name='lucene-core' version='4.0.0' />
+      <dependency group='commons-fileupload' name='commons-fileupload' version='1.3' />
+      <dependency group='' name='slf4j-api' version='1.6.1' />
+      <dependency group='' name='commons-httpclient' version='3.1' />
+      <dependency group='org.apache.shiro' name='shiro-spring' version='1.2.0' />
+    </compile>
+    <runtime>
+      <dependency group='net.sf.ehcache' name='ehcache-core' version='2.6.6' />
+      <dependency group='org.terracotta' name='terracotta-toolkit-1.6-runtime' version='5.5.0' />
+      <dependency group='net.sf.ehcache' name='ehcache-terracotta' version='2.6.6' />
+    </runtime>
+  </dependencies>
+  <plugins>
+    <compile>
+      <plugin group='org.grails.plugins' name='database-migration' version='1.1' />
+      <plugin group='org.grails.plugins' name='cache' version='1.0.0' />
+      <plugin group='org.grails.plugins' name='hibernate' version='2.2.3' />
+      <plugin group='org.grails.plugins' name='jquery' version='1.7.2' />
+    </compile>
+    <runtime>
+      <plugin group='org.grails.plugins' name='mail' version='1.0.1' />
+      <plugin group='org.grails.plugins' name='hibernate-filter' version='0.3.2' />
+    </runtime>
+    <build>
+      <plugin group='org.grails.plugins' name='tomcat' version='2.2.3' />
+    </build>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
